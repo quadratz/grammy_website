@@ -1,8 +1,13 @@
 import lume from "lume/mod.ts";
-import { currentVersions } from "./plugins/current_versions/plugins.ts";
+import { currentVersions } from "./plugins/current_versions/mod.ts";
+import { betterLineBreaks } from "./plugins/better_line_breaks/mod.ts";
 
 const site = lume({
   src: "./docs",
+}, {
+  markdown: {
+    plugins: [betterLineBreaks],
+  },
 });
 
 site.addEventListener("beforeRender", (event) => {

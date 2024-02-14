@@ -11,7 +11,8 @@
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.0.3/"
+    "lume/": "https://deno.land/x/lume@v2.0.3/",
+    "@type/markdownIt": "https://esm.sh/v135/@types/markdown-it@13.0.7/~.d.ts"
   },
   "fmt": {
     "proseWrap": "preserve"
