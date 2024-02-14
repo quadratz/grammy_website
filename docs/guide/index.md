@@ -38,11 +38,21 @@ provides. It is automatically generated from grammY's code and contains all of
 the useful tooltip explanations, normally found by hovering your cursor over any
 element of grammY in a code editor.
 
+```ts
+Hello WOLRD
+```
+
 **The third part** is provided by Telegram and lists the raw definitions of the
 [HTTP API](https://core.telegram.org/bots/api) that grammY will connect to under
 the hood. The grammY API reference links to it wherever that makes sense. Have a
 look at it when you are interested in the detailed options that you can pass to
 API calls.
+
+```txt
+mkdir ./my-bot
+cd ./my-bot
+code .
+```
 
 ::: tip Join the Community! We have a friendly
 [community chat](https://t.me/grammyjs) on Telegram that welcomes all new

@@ -1,8 +1,8 @@
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A - --config=_lume/config.ts",
     "build": "deno task lume",
-    "serve": "deno task lume -s"
+    "serve": "deno task build -s"
   },
   "compilerOptions": {
     "types": [
