@@ -1,7 +1,7 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A - --config=lume/config.ts",
-    "build": "deno task lume",
+    "build": "deno task lume --warning",
     "serve": "deno task build -s",
     "check": "deno fmt && deno lint"
   },
@@ -15,6 +15,10 @@
     "@type/markdownIt": "https://esm.sh/v135/@types/markdown-it@13.0.7/~.d.ts"
   },
   "fmt": {
-    "proseWrap": "preserve"
+    "proseWrap": "preserve",
+    "exclude": ["./_site"]
+  },
+  "lint": {
+    "exclude": ["./_site"]
   }
 }
