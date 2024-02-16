@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A - --config=lume/config.ts",
-    "build": "deno task lume --warning",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A - --config=site/lume/config.ts",
+    "build": "deno task lume",
     "serve": "deno task build -s",
     "check": "deno fmt && deno lint"
   },
@@ -12,7 +12,8 @@
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.0.3/",
-    "@type/markdownIt": "https://esm.sh/v135/@types/markdown-it@13.0.7/~.d.ts"
+    "types/markdownIt": "npm:@types/markdown-it@13.0.7",
+    "tailwindcss/typography": "npm:@tailwindcss/typography@0.5.10"
   },
   "fmt": {
     "proseWrap": "preserve",

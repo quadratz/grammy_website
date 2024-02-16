@@ -1,3 +1,21 @@
 {
-  "deno.enable": true
+  "deno.enable": true,
+  "files.associations": {
+    "*.vto": "vento"
+  },
+  "[vento]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[vto]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "vento": "html"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false
 }

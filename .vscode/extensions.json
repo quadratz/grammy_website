@@ -1,5 +1,8 @@
 {
   "recommendations": [
-    "denoland.vscode-deno"
+    "denoland.vscode-deno",
+    "bradlc.vscode-tailwindcss",
+    "oscarotero.vento-syntax",
+    "davidanson.vscode-markdownlint"
   ]
 }
