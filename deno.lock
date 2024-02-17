@@ -3,7 +3,9 @@
   "packages": {
     "specifiers": {
       "npm:@js-temporal/polyfill@0.4.4": "npm:@js-temporal/polyfill@0.4.4",
+      "npm:@shikijs/markdown-it@1.1.3": "npm:@shikijs/markdown-it@1.1.3",
       "npm:@tailwindcss/typography@0.5.10": "npm:@tailwindcss/typography@0.5.10_tailwindcss@3.4.1__postcss@8.4.33",
+      "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:autoprefixer@10.4.16": "npm:autoprefixer@10.4.16_postcss@8.4.33",
       "npm:markdown-it-attrs@4.1.6": "npm:markdown-it-attrs@4.1.6_markdown-it@14.0.0",
       "npm:markdown-it-deflist@3.0.0": "npm:markdown-it-deflist@3.0.0",
@@ -91,6 +93,24 @@
         "integrity": "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==",
         "dependencies": {}
       },
+      "@shikijs/core@1.1.3": {
+        "integrity": "sha512-1QWSvWcPbvZXsDxB1F7ejW+Kuxp3z/JHs944hp/f8BYOlFd5gplzseFIkE/GTu/qytFef3zNME4qw1oHbQ0j2A==",
+        "dependencies": {}
+      },
+      "@shikijs/markdown-it@1.1.3": {
+        "integrity": "sha512-6mz/rSOZu4lOtW+nl60D0OrLJdJewoXLTcxojAPKiTdIN767LDJ6ZQzx9pPobsch2Oyl2z1zBr4rI2uH1UW+Zw==",
+        "dependencies": {
+          "@shikijs/transformers": "@shikijs/transformers@1.1.3",
+          "markdown-it": "markdown-it@14.0.0",
+          "shiki": "shiki@1.1.3"
+        }
+      },
+      "@shikijs/transformers@1.1.3": {
+        "integrity": "sha512-jv71dQFTucv2RK2pafAxca4hgKP6Uv5ukKrVjH/vGZ8jGH0j2AcLVCcM76ieamwJ1p5WkZcA0X/Bq2qpjhEUSg==",
+        "dependencies": {
+          "shiki": "shiki@1.1.3"
+        }
+      },
       "@tailwindcss/typography@0.5.10_tailwindcss@3.4.1__postcss@8.4.33": {
         "integrity": "sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==",
         "dependencies": {
@@ -100,6 +120,10 @@
           "postcss-selector-parser": "postcss-selector-parser@6.0.10",
           "tailwindcss": "tailwindcss@3.4.1_postcss@8.4.33"
         }
+      },
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
+        "dependencies": {}
       },
       "ansi-regex@5.0.1": {
         "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==",
@@ -641,6 +665,12 @@
         "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==",
         "dependencies": {}
       },
+      "shiki@1.1.3": {
+        "integrity": "sha512-k/B4UvtWmGcHMLp6JnQminlex3Go5MHKXEiormmzTJECAiSQiwSon6USuwTyto8EMUQc9aYRJ7HojkfVLbBk+g==",
+        "dependencies": {
+          "@shikijs/core": "@shikijs/core@1.1.3"
+        }
+      },
       "signal-exit@4.1.0": {
         "integrity": "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==",
         "dependencies": {}
@@ -1178,6 +1208,10 @@
     "https://deno.land/x/deno_dom@v0.1.43/src/dom/utils-types.ts": "96db30e3e4a75b194201bb9fa30988215da7f91b380fca6a5143e51ece2a8436",
     "https://deno.land/x/deno_dom@v0.1.43/src/dom/utils.ts": "4c6206516fb8f61f37a209c829e812c4f5a183e46d082934dd14c91bde939263",
     "https://deno.land/x/deno_dom@v0.1.43/src/parser.ts": "e06b2300d693e6ae7564e53dfa5c9a9e97fdb8c044c39c52c8b93b5d60860be3",
+    "https://deno.land/x/denoflate@1.2.1/mod.ts": "f5628e44b80b3d80ed525afa2ba0f12408e3849db817d47a883b801f9ce69dd6",
+    "https://deno.land/x/denoflate@1.2.1/pkg/denoflate.js": "b9f9ad9457d3f12f28b1fb35c555f57443427f74decb403113d67364e4f2caf4",
+    "https://deno.land/x/denoflate@1.2.1/pkg/denoflate_bg.wasm.js": "d581956245407a2115a3d7e8d85a9641c032940a8e810acbd59ca86afd34d44d",
+    "https://deno.land/x/esbuild@v0.19.11/mod.js": "bd4916647799a0cd046dcf4eafd6ace09d22d5898870bd062206b8b6343d5e6a",
     "https://deno.land/x/lume@v2.0.3/cli.ts": "ec79a3b06406f163de3c9228ffa3ab2381409fd3441056d7d67093a3259f477c",
     "https://deno.land/x/lume@v2.0.3/cli/build.ts": "f8c1068fd2b06df526d6d6c6e63ff7022049ce5ce1b133f2e4d74c0b3788c099",
     "https://deno.land/x/lume@v2.0.3/cli/create.ts": "85b0cf567e452616ea55ab9742f84957c385bb38d3f8b3fbcfd8c86dbcbc326c",
@@ -1228,6 +1262,7 @@
     "https://deno.land/x/lume@v2.0.3/deps/colors.ts": "659aa4bc7885d2d5f4f4c47da14b6bf04b3595535c491f27e3ce9c802934818e",
     "https://deno.land/x/lume@v2.0.3/deps/crypto.ts": "fb72af775aae9fb4d64b6e502a221668961a63ec7bab5678827e0cea46ded4e2",
     "https://deno.land/x/lume@v2.0.3/deps/dom.ts": "7eef681d9eabb49c2fb230faa75e33371ab7bbe30a03f4f4c7d6d723742f775a",
+    "https://deno.land/x/lume@v2.0.3/deps/esbuild.ts": "e36187b1f1d5872631d4d9a846b99478fc31efe983d4d8709106f367e4dd2874",
     "https://deno.land/x/lume@v2.0.3/deps/front_matter.ts": "5d023497eace3b327d4c1037a837ac8e0b6adf2b40310edbd881008176ddfaa2",
     "https://deno.land/x/lume@v2.0.3/deps/fs.ts": "86601d766967917078c94225d625dfb83a0f3c14dabc32ed97fe9aecb01f7b12",
     "https://deno.land/x/lume@v2.0.3/deps/hex.ts": "13a69c4cd15a1727b878a8c64d592301dec2ee928ca4b372c4fdac32bb92af2a",
@@ -1248,6 +1283,7 @@
     "https://deno.land/x/lume@v2.0.3/middlewares/reload.ts": "c9999bdd52e18e85a1634659506542ce0e942cc91b69e3fc9887cabf23ca4592",
     "https://deno.land/x/lume@v2.0.3/middlewares/reload_client.js": "34d75e01503fae8180796de882af42b1125fac88f22a010a99d5548de1ba7d72",
     "https://deno.land/x/lume@v2.0.3/mod.ts": "79b72a3b7f102be55058682948f2f969a88d69f55cf5bcec7cc8cf9f06609c0f",
+    "https://deno.land/x/lume@v2.0.3/plugins/esbuild.ts": "a1b5bc51acdbe82b8ec179d922bc1cab898a834a38d3b75b8fdfa0920264a9e8",
     "https://deno.land/x/lume@v2.0.3/plugins/json.ts": "f6429bbd865e3666ef3385fd205fcc92df02ca2c0f74f20baa5c0798a81e1642",
     "https://deno.land/x/lume@v2.0.3/plugins/markdown.ts": "7f4f2cff511d81ea39fcea3d3b39dc34c79a952f911398eac919ced25a5e4365",
     "https://deno.land/x/lume@v2.0.3/plugins/modify_urls.ts": "f2319fd98d60578fe78f4c197aa5d98785234732bbd2287e78a47d15d4a2b641",
@@ -1282,8 +1318,10 @@
   },
   "workspace": {
     "dependencies": [
+      "npm:@shikijs/markdown-it@1.1.3",
       "npm:@tailwindcss/typography@0.5.10",
-      "npm:@types/markdown-it@13.0.7"
+      "npm:@types/markdown-it@13.0.7",
+      "npm:shiki@1.1.3"
     ]
   }
 }

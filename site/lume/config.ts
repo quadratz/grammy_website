@@ -1,10 +1,12 @@
 import { betterLineBreaks } from "./plugins/better_line_breaks/mod.ts";
 import { currentVersions } from "./plugins/current_versions/mod.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 import lume from "lume/mod.ts";
 import modifyUrls from "lume/plugins/modify_urls.ts";
 import postcss from "lume/plugins/postcss.ts";
+import shiki from "shiki/markdown";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
-import typography from "tailwindcss/typography";
+import typography from "tailwind/typography";
 
 const site = lume({
   src: "./site/",
@@ -12,7 +14,15 @@ const site = lume({
   includes: "./lume/includes/",
 }, {
   markdown: {
-    plugins: [betterLineBreaks],
+    plugins: [
+      betterLineBreaks,
+      await shiki({
+        themes: {
+          light: "dracula",
+          dark: "dracula",
+        },
+      }),
+    ],
   },
 });
 
@@ -38,5 +48,6 @@ site.use(tailwindcss({
   },
 }));
 site.use(postcss());
+site.use(esbuild());
 
 export default site;

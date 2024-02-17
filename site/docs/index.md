@@ -1,45 +1,8 @@
 ---
-titleTemplate: false
-
-hero:
-  name: grammY
-  text: The Telegram Bot Framework.
-  taglines: 
-    - think of the whY.
-    - a new era of bot development.
-    - runs faster than you.
-    - have fun making bots.
-    - one update ahead.
-    - can do anything except dishes.
-    - easy peasy lemon squeezY.
-    - billions and billions served.
-    - powered by obsession.
-  image:
-    src: /images/Y.svg
-    alt: grammY logo
-  actions:
-    - theme: brand
-      text: Get Started
-      link: ./guide/getting-started
-    - theme: alt
-      text: Documentation
-      link: ./guide/
-
-features:
-  - icon: <lazy-tgs-player class="VPImage" src="/icons/beach-animation.tgs"><img src="/icons/beach.svg" alt="beach animation"></lazy-tgs-player>
-    title: Easy-to-use
-    details: grammY makes creating Telegram bots so simple you already know how to do it.
-  - icon: <lazy-tgs-player class="VPImage" src="/icons/palette-animation.tgs"><img src="/icons/palette.svg" alt="palette animation"></lazy-tgs-player>
-    title: Flexible
-    details: grammY is open and can be extended by plugins to make it fit exactly your needs.
-  - icon: <lazy-tgs-player class="VPImage" src="/icons/rocket-animation.tgs"><img src="/icons/rocket.svg" alt="rocket animation"></lazy-tgs-player>
-    title: Scalable
-    details: grammY has you covered when your bot gets popular and the traffic increases.
+layout: layouts/home.vto
 ---
 
-<!-- markdownlint-disable no-inline-html -->
-
-<HomeContent>
+<!-- markdownlint-disable no-inline-html first-line-h1-->
 
 ## Quickstart
 

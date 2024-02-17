@@ -12,8 +12,10 @@
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.0.3/",
-    "types/markdownIt": "npm:@types/markdown-it@13.0.7",
-    "tailwindcss/typography": "npm:@tailwindcss/typography@0.5.10"
+    "shiki": "npm:shiki@1.1.3",
+    "shiki/markdown": "npm:@shikijs/markdown-it@1.1.3",
+    "tailwind/typography": "npm:@tailwindcss/typography@0.5.10",
+    "types/markdownIt": "npm:@types/markdown-it@13.0.7"
   },
   "fmt": {
     "proseWrap": "preserve",

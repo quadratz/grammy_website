@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#cursor {
+  color: #E0DEF4;
+  /* background-color: #E0DEF4; */
+  animation: blinker 1100ms step-start infinite;
+  animation-delay: 700ms;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
