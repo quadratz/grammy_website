@@ -1,28 +1,28 @@
 type NavbarList = {
-  text: string,
-  link: string,
-  description?: string,
-}
+  text: string;
+  link: string;
+  description?: string;
+};
 
 type NavbarGroup = {
-  text: string,
-  items: Array<NavbarList>
-}
+  text: string;
+  items: Array<NavbarList>;
+};
 
 type NavbarMenu = {
-  text: string,
-  items: Array<NavbarGroup>
-}
+  text: string;
+  items: Array<NavbarGroup>;
+};
 
 type NavbarItem = {
-  text: string,
-  link: string,
-}
+  text: string;
+  link: string;
+};
 
 const guide: NavbarItem = {
   text: "Guide",
-  link: "/guide/"
-}
+  link: "/guide/",
+};
 
 const learn: NavbarMenu = {
   text: "learn",
@@ -136,6 +136,6 @@ export default {
   langCode: "en",
   items: [
     guide,
-    learn
-  ]
-}
+    learn,
+  ],
+};

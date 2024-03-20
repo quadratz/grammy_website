@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
       break;
   }
 
-  const darkmodeList = document.querySelectorAll<HTMLElement>('[id^="darkmode-list-"]');
+  const darkmodeList = document.querySelectorAll<HTMLElement>(
+    '[id^="darkmode-list-"]',
+  );
   for (const el of darkmodeList) {
     // JavaScript is enabled in the client device, thus enable all the darkmode options
     el.toggleAttribute("disabled", false);
@@ -27,29 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
       enableChecked(this.id);
       localStorage.theme = this.id.replace("darkmode-list-", "");
       toggleDarkmode();
-    })
+    });
   }
-})
+});
 
 function toggleDarkmode() {
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
   switch (localStorage.theme) {
     case "dark":
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
       showDarkmodeBtnIcon("darkmode-btn-icon-dark-fill");
       break;
 
     case "light":
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
       showDarkmodeBtnIcon("darkmode-btn-icon-light-fill");
       break;
 
     case "auto":
-      if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.classList.add('dark');
+      if (globalThis.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
         showDarkmodeBtnIcon("darkmode-btn-icon-dark-outline");
       } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.remove("dark");
         showDarkmodeBtnIcon("darkmode-btn-icon-light-outline");
       }
       break;
@@ -58,7 +60,9 @@ function toggleDarkmode() {
 
 function enableChecked(id: string) {
   // Select id begins with `darkmode-list-`
-  const darkmodeList = document.querySelectorAll<HTMLElement>('[id^="darkmode-list-"]');
+  const darkmodeList = document.querySelectorAll<HTMLElement>(
+    '[id^="darkmode-list-"]',
+  );
 
   for (const el of darkmodeList) {
     if (el.id === id) {
@@ -71,7 +75,9 @@ function enableChecked(id: string) {
 
 function showDarkmodeBtnIcon(id: string) {
   // Select id begins with `darkmode-list-`
-  const darkmodeBtnIcons = document.querySelectorAll<HTMLElement>('[id^="darkmode-btn-icon-"]');
+  const darkmodeBtnIcons = document.querySelectorAll<HTMLElement>(
+    '[id^="darkmode-btn-icon-"]',
+  );
 
   for (const el of darkmodeBtnIcons) {
     if (el.id === id) {

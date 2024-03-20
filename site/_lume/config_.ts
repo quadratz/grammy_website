@@ -1,4 +1,7 @@
-import { addCurrentCodeLang, assignIdToCodeBlock } from "./plugins/site_processor.ts";
+import {
+  addCurrentCodeLang,
+  assignIdToCodeBlock,
+} from "./plugins/site_processor.ts";
 import { betterLineBreaks } from "./plugins/better_line_breaks/mod.ts";
 import { currentVersions } from "./plugins/current_versions/plugin.ts";
 import { containerPlugin } from "./plugins/markdown/containers.ts";
@@ -69,7 +72,9 @@ site.preprocess([".html"], (pages) => {
     // Assign title page.
     // If the title is empty, use heading as the title.
     if (!page.data.title) {
-      const headingText = page.document?.querySelector<HTMLHeadingElement>("body")?.innerHTML;
+      const headingText = page.document?.querySelector<HTMLHeadingElement>(
+        "body",
+      )?.innerHTML;
       // console.log(page);
       page.data.title = headingText ? `${headingText} - grammY` : "grammY";
     }
@@ -81,7 +86,7 @@ site.preprocess([".html"], (pages) => {
     //   grammy.dev/docs/id/guide --> grammy.dev/id/guide
     page.data.url = page.data.url.replace(/^\/docs\/(en\/)?/, "/");
   }
-})
+});
 site.addEventListener("beforeRender", (event) => {
   for (const page of event.pages) {
     const content = page.data.content;
@@ -128,9 +133,9 @@ site.use(lightningCss({
       ios_saf: version(15, 6),
       safari: version(17, 2),
       opera: version(105),
-      samsung: version(22)
+      samsung: version(22),
     },
-  }
+  },
 }));
 
 site.use(tsx());
