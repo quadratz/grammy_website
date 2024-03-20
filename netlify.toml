@@ -58,8 +58,8 @@
   status = 301
   
 [[redirects]]
-  from = "/index.html"
-  to = "/en/:splat"
+  from = "/"
+  to = "/en/"
   status = 301
 
 [[redirects]]
