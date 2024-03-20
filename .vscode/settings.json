@@ -1,21 +1,48 @@
 {
   "deno.enable": true,
+  "deno.config": "./deno.jsonc",
   "files.associations": {
+    // "*.vto": "html",
     "*.vto": "vento"
   },
-  "[vento]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[vto]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
+  // "[vento]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[vto]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[html]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "vento": "html"
   },
+  "tailwind-fold.supportedLanguages": [
+    "vento"
+  ],
+  "tailwind-fold.showTailwindImage": false,
   "editor.inlineSuggest.enabled": true,
   "editor.quickSuggestions": {
     "strings": true
   },
-  "css.validate": false
+  "css.validate": false,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100,
+  "editor.rulers": [
+    100
+  ],
+  "css.customData": [
+    ".vscode/tailwind.json"
+  ],
+  "[vento]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "prettier.documentSelectors": [
+    "**/*.vto"
+  ],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSaveMode": "file"
 }

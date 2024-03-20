@@ -1,0 +1,18 @@
+@layer base {
+
+  .code,
+  pre {
+    /**
+    * ss19: Broken equals ligatures
+    * ==, ===, !=, !==
+    * 
+    * https://github.com/JetBrains/JetBrainsMono/blob/8c3ccf768d899b989a8843ae6bfaad3177c82303/README.md#opentype-features
+    */
+    font-feature-settings: '"ss19"';
+  }
+
+  .logo {
+    /* Style letter "a" in "grammY" */
+    font-feature-settings: "cv11";
+  }
+}

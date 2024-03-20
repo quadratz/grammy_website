@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="preload"
+      href="/fonts/InterVariable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/InterVariable-Italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/JetBrainsMono-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/JetBrainsMono-Italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <script defer src="scripts/code.js"></script>
+    <script defer src="scripts/copy.js"></script>
+    <script defer src="scripts/code_group.js"></script>
+    <script defer src="scripts/darkMode_toggle.js"></script>
+    <title>Hello world</title>
+  </head>
+
+  <body class="bg-white dark:bg-slate-900">
+    <nav
+      class="mx-4 flex select-none items-center justify-between text-nowrap fill-white pt-5 text-sm font-semibold lg:mx-8 lg:pt-[1.875rem5v] dark:fill-slate-200 dark:text-slate-200"
+      aria-label="Navigation bar."
+    >
+      <a class="logo mr-6 flex items-center" href="/">
+        <svg
+          class="mr-1.5 h-6 w-auto"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 320 320"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
+              .cls-2 {
+                fill: url(#linear-gradient);
+              }
+            </style>
+            <linearGradient
+              id="linear-gradient"
+              x1="-483.3"
+              y1="830.09"
+              x2="-424.63"
+              y2="907.83"
+              gradientTransform="translate(1503.28 2543.19) scale(2.83 -2.83)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#009dca" />
+              <stop offset="1" stop-color="#fff" />
+            </linearGradient>
+          </defs>
+          <g id="Y">
+            <rect class="cls-1" width="160" height="320" />
+            <rect class="cls-1" x="160" width="160" height="320" />
+            <path
+              id="path895"
+              class="cls-2"
+              d="m65.44,91.86h37.72l56.84,75.33L273.8,15.01l29.66-15.01-5.41,30.48-120.66,165.91v123.6h-35.29v-123.6l-76.65-104.53Z"
+            />
+          </g>
+        </svg>
+        <span class="text-xl font-medium">grammY</span>
+        <span class="sr-only">home page.</span>
+      </a>
+      <div class="flex items-center">
+        <ul class="inline-flex items-center gap-4">
+          {{ for nav of navbar.items }}
+            {{ if nav.items }}
+              {{ for menu of nav }}
+                <li>
+                  {{ if menu.link }}
+                    <a
+                      class="flex items-center justify-between gap-0.5 hover:text-sky-400 dark:hover:fill-sky-400"
+                      href="{{ menu.link }}"
+                    >
+                      <span>{{ menu.text }}</span>
+                      <svg
+                        class="size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 -960 960 960"
+                        width="20"
+                      >
+                        <path
+                          d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"
+                        />
+                      </svg>
+                    </a>
+                  {{ else }}
+                    <span>{{ menu.text }}
+                  {{ /if }}
+                </li>
+              {{ /for }}
+            {{ else }}
+              <li>
+                <a class="mr-3 hover:text-sky-400" href="{{ nav.link }}">
+                  <span>{{ nav.text }}</span>
+                </a>
+              </li>
+            {{ /if }}
+          {{ /for }}
+          {{#
+          <li>
+            <a
+              class="flex items-center justify-between gap-0.5 hover:text-sky-400 dark:hover:fill-sky-400"
+              href="/showcase"
+            >
+              <span>Learn</span>
+              <svg
+                class="size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 -960 960 960"
+                width="20"
+              >
+                <path
+                  d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center justify-between gap-0.5 hover:text-sky-400 dark:hover:fill-sky-400"
+              href="/showcase"
+            >
+              <span>Plugins</span>
+              <svg
+                class="size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 -960 960 960"
+                width="20"
+              >
+                <path
+                  d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center justify-between gap-0.5 hover:text-sky-400 dark:hover:fill-sky-400"
+              href="/showcase"
+            >
+              <span>Examples</span>
+              <svg
+                class="size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 -960 960 960"
+                width="20"
+              >
+                <path
+                  d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center justify-between gap-0.5 hover:text-sky-400 dark:hover:fill-sky-400"
+              href="/showcase"
+            >
+              <span>Resources</span>
+              <svg
+                class="size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 -960 960 960"
+                width="20"
+              >
+                <path
+                  d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center justify-between gap-0.5 hover:text-sky-400 dark:hover:fill-sky-400"
+              href="/showcase"
+            >
+              <span>Hosting</span>
+              <svg
+                class="size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 -960 960 960"
+                width="20"
+              >
+                <path
+                  d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              class="external-link group mt-[calc(0.125rem+1px)] flex flex-col items-center justify-between hover:mt-[calc(0.25rem)] hover:fill-sky-400 hover:text-white"
+              href="/showcase"
+            >
+              <span>API Reference</span>
+              <div
+                class="external-link-underline mt-0.5 h-px w-full bg-sky-400 group-hover:h-0.5"
+              ></div>
+            </a>
+          </li>
+          #}}
+        </ul>
+        <div class="separator mx-4 h-6 w-px bg-slate-700"></div>
+        <ul id="button-list" class="flex items-center gap-3">
+          <li id="lang-toogle" class="flex items-center">
+            <button
+              class="flex items-center justify-between fill-slate-400 hover:fill-white"
+            >
+              <svg
+                class="size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                height="20"
+                viewBox="0 -960 960 960"
+                width="20"
+              >
+                <path
+                  d="m488-96 171-456h82L912-96h-79l-41-117H608L567-96h-79ZM169-216l-50-51 192-190q-36-38-67-79t-54-89h82q18 32 36 54.5t52 60.5q38-42 70-87.5t52-98.5H48v-72h276v-96h72v96h276v72H558q-21 69-61 127.5T409-457l91 90-28 74-112-112-191 189Zm463-63h136l-66-189-70 189Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li id="darkmode-toogle" class="relative">
+            <button
+              id="darkmode-btn"
+              class="peer flex items-center justify-between fill-slate-400 dark:hover:fill-white"
+            >
+              <svg
+                id="darkmode-btn-icon-light-fill"
+                class="hidden size-5 fill-sky-400"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M442.5-796v-116h75v116h-75Zm0 747v-116h75v116h-75Zm353-394v-75h116v75h-116Zm-747 0v-75h116v75h-116Zm694-247-53-53 68-70 55 55-70 68Zm-540 542-55-55 70-68 53 53-68 70Zm555 0-68-70 53-53 70 68-55 55Zm-540-542-70-68 55-55 68 70-53 53Zm262.412 442Q383-248 315.25-315.838t-67.75-164.75q0-96.912 67.838-164.662T480.088-713Q577-713 644.75-645.162t67.75 164.75q0 96.912-67.838 164.662T479.912-248Z"
+                />
+              </svg>
+              <svg
+                id="darkmode-btn-icon-light-outline"
+                class="size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M442.5-796v-116h75v116h-75Zm0 747v-116h75v116h-75Zm353-394v-75h116v75h-116Zm-747 0v-75h116v75h-116Zm694-247-53-53 68-70 55 55-70 68Zm-540 542-55-55 70-68 53 53-68 70Zm555 0-68-70 53-53 70 68-55 55Zm-540-542-70-68 55-55 68 70-53 53Zm262.412 442Q383-248 315.25-315.838t-67.75-164.75q0-96.912 67.838-164.662T480.088-713Q577-713 644.75-645.162t67.75 164.75q0 96.912-67.838 164.662T479.912-248Zm.088-75q65.5 0 111.5-46t46-111.5q0-65.5-46-111.5T480-638q-65.5 0-111.5 46t-46 111.5q0 65.5 46 111.5T480-323Zm0-157.5Z"
+                />
+              </svg>
+              <svg
+                id="darkmode-btn-icon-dark-fill"
+                class="hidden size-5 fill-sky-400"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M479.971-122.5Q331-122.5 226.75-226.779 122.5-331.059 122.5-480.029 122.5-629 226.771-733.25T480-837.5q12 0 24 .75t23.5 2.75q-39.5 29.5-62.75 75t-23.25 99q0 91.042 63.729 154.771Q568.958-441.5 660-441.5q54.065 0 99.282-23.25Q804.5-488 834-527.5q2 11.5 2.75 23.5t.75 24q0 148.958-104.279 253.229Q628.941-122.5 479.971-122.5Z"
+                />
+              </svg>
+              <svg
+                id="darkmode-btn-icon-dark-outline"
+                class="hover:white hidden size-5"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M479.971-122.5Q331-122.5 226.75-226.779 122.5-331.059 122.5-480.029 122.5-629 226.771-733.25T480-837.5q12 0 24 .75t23.5 2.75q-39.5 29.5-62.75 75t-23.25 99q0 91.042 63.729 154.771Q568.958-441.5 660-441.5q54.065 0 99.282-23.25Q804.5-488 834-527.5q2 11.5 2.75 23.5t.75 24q0 148.958-104.279 253.229Q628.941-122.5 479.971-122.5Zm.192-75Q569-197.5 640-247.75 711-298 744-378.5q-21.333 5.455-42.667 8.727Q680-366.5 660.158-366.5q-122.027 0-207.842-85.816Q366.5-538.131 366.5-660.158q0-19.842 3.273-41.175 3.272-21.334 8.727-42.667-80.5 33-130.75 103.921T197.5-480q0 117.036 82.78 199.768T480.163-197.5ZM471-471Z"
+                />
+              </svg>
+            </button>
+            <div
+              class="absolute left-1/2 hidden -translate-x-1/2 pt-4 hover:block peer-hover:block"
+              id="darkmode-menu-area"
+            >
+              <fieldset
+                id="darkmode-menu"
+                class="-left-3.5 w-auto rounded-lg border border-slate-700/50 bg-slate-800 py-1"
+                aria-labelledby="darkmode-list-title"
+              >
+                <h2
+                  id="darkmode-list-title"
+                  class="m-1 select-none px-2 font-semibold text-slate-400"
+                >
+                  Appearance
+                </h2>
+                <input
+                  type="radio"
+                  name="darkmode-list"
+                  id="darkmode-list-light"
+                  class="hidden"
+                  checked
+                />
+                <label
+                  for="darkmode-list-light"
+                  class="flex w-full cursor-pointer items-center gap-2 px-2 py-1 hover:bg-slate-700"
+                >
+                  <svg
+                    class="darkmode-list-icon-active hidden size-5 fill-sky-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M442.5-796v-116h75v116h-75Zm0 747v-116h75v116h-75Zm353-394v-75h116v75h-116Zm-747 0v-75h116v75h-116Zm694-247-53-53 68-70 55 55-70 68Zm-540 542-55-55 70-68 53 53-68 70Zm555 0-68-70 53-53 70 68-55 55Zm-540-542-70-68 55-55 68 70-53 53Zm262.412 442Q383-248 315.25-315.838t-67.75-164.75q0-96.912 67.838-164.662T480.088-713Q577-713 644.75-645.162t67.75 164.75q0 96.912-67.838 164.662T479.912-248Z"
+                    />
+                  </svg>
+                  <svg
+                    class="darkmode-list-icon size-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M442.5-796v-116h75v116h-75Zm0 747v-116h75v116h-75Zm353-394v-75h116v75h-116Zm-747 0v-75h116v75h-116Zm694-247-53-53 68-70 55 55-70 68Zm-540 542-55-55 70-68 53 53-68 70Zm555 0-68-70 53-53 70 68-55 55Zm-540-542-70-68 55-55 68 70-53 53Zm262.412 442Q383-248 315.25-315.838t-67.75-164.75q0-96.912 67.838-164.662T480.088-713Q577-713 644.75-645.162t67.75 164.75q0 96.912-67.838 164.662T479.912-248Zm.088-75q65.5 0 111.5-46t46-111.5q0-65.5-46-111.5T480-638q-65.5 0-111.5 46t-46 111.5q0 65.5 46 111.5T480-323Zm0-157.5Z"
+                    />
+                  </svg>
+                  <span class="darkmode-list-text">Light</span>
+                </label>
+                <input
+                  type="radio"
+                  name="darkmode-list"
+                  id="darkmode-list-dark"
+                  class="peer/dark hidden"
+                  disabled
+                />
+                <label
+                  for="darkmode-list-dark"
+                  class="flex w-full cursor-pointer items-center gap-2 px-2 py-1 hover:bg-slate-700 peer-disabled/dark:cursor-not-allowed peer-disabled/dark:fill-slate-500 peer-disabled/dark:text-slate-500 peer-disabled/dark:hover:bg-inherit"
+                >
+                  <svg
+                    class="darkmode-list-icon-active hidden size-5 fill-sky-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M479.971-122.5Q331-122.5 226.75-226.779 122.5-331.059 122.5-480.029 122.5-629 226.771-733.25T480-837.5q12 0 24 .75t23.5 2.75q-39.5 29.5-62.75 75t-23.25 99q0 91.042 63.729 154.771Q568.958-441.5 660-441.5q54.065 0 99.282-23.25Q804.5-488 834-527.5q2 11.5 2.75 23.5t.75 24q0 148.958-104.279 253.229Q628.941-122.5 479.971-122.5Z"
+                    />
+                  </svg>
+                  <svg
+                    class="darkmode-list-icon size-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M479.971-122.5Q331-122.5 226.75-226.779 122.5-331.059 122.5-480.029 122.5-629 226.771-733.25T480-837.5q12 0 24 .75t23.5 2.75q-39.5 29.5-62.75 75t-23.25 99q0 91.042 63.729 154.771Q568.958-441.5 660-441.5q54.065 0 99.282-23.25Q804.5-488 834-527.5q2 11.5 2.75 23.5t.75 24q0 148.958-104.279 253.229Q628.941-122.5 479.971-122.5Zm.192-75Q569-197.5 640-247.75 711-298 744-378.5q-21.333 5.455-42.667 8.727Q680-366.5 660.158-366.5q-122.027 0-207.842-85.816Q366.5-538.131 366.5-660.158q0-19.842 3.273-41.175 3.272-21.334 8.727-42.667-80.5 33-130.75 103.921T197.5-480q0 117.036 82.78 199.768T480.163-197.5ZM471-471Z"
+                    />
+                  </svg>
+                  <span class="darkmode-list-text">Dark</span>
+                </label>
+                <input
+                  type="radio"
+                  name="darkmode-list"
+                  id="darkmode-list-auto"
+                  class="peer/auto hidden"
+                  disabled
+                />
+                <label
+                  for="darkmode-list-auto"
+                  class="flex w-full cursor-pointer items-center gap-2 px-2 py-1 hover:bg-slate-700 peer-disabled/auto:cursor-not-allowed peer-disabled/auto:fill-slate-500 peer-disabled/auto:text-slate-500 peer-disabled/auto:hover:bg-inherit"
+                >
+                  <svg
+                    class="darkmode-list-icon-active hidden size-5 fill-sky-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M440-122.5q-132.5 0-225-92.5t-92.5-225q0-132.5 92.5-225t225-92.5q3.5 0 7.5.25t7.5.25q-27 33-42.25 73.25T397.5-600q0 101 70.75 171.75T640-357.5q30 0 58.25-7t54.25-21q-19 115-107.5 189t-205 74Zm115.5-400 126.5-355h76l126.5 355h-70l-26-72h-137l-26 72h-70Zm115-129h99l-49.5-157-49.5 157Z"
+                    />
+                  </svg>
+                  <svg
+                    class="darkmode-list-icon size-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="M440-197.5q54 0 102-22.5t83.5-63q-128-8-215.5-98.5T322.5-600q0-14.197 1.5-27.849 1.5-13.651 3.5-27.151-59 33-94.5 90.258Q197.5-507.483 197.5-440q0 101.042 70.729 171.771Q338.958-197.5 440-197.5Zm-.095 75Q307.5-122.5 215-215t-92.5-225q0-132.5 92.5-225t225-92.5q3.75 0 7.5.25t7.5.25q-27 33-42.25 73.25T397.5-600q0 101.042 70.729 171.771Q538.958-357.5 640-357.5q29.794 0 58.147-7 28.353-7 54.353-21-19 115-107.5 189t-205.095 74Zm115.595-400 126.5-355h76l126.5 355h-70.154l-25.846-72h-137l-25.846 72H555.5Zm115-129h99l-49.5-157-49.5 157Zm-260 269Z"
+                    />
+                  </svg>
+                  <span class="darkmode-list-text">Auto</span>
+                </label>
+              </fieldset>
+            </div>
+          </li>
+        </ul>
+        <div class="separator mx-4 h-6 w-px bg-slate-700"></div>
+        <ul id="social-link" class="flex items-center gap-3">
+          <li>
+            <a
+              id="telegram"
+              href="https://t.me/"
+              class="fill-slate-400 dark:hover:fill-slate-200"
+            >
+              <svg
+                class="size-5"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Telegram group of grammY.</title>
+                <path
+                  d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              id="github"
+              href="https://github.com/grammyjs/grammy"
+              class="fill-slate-400 dark:hover:fill-slate-200"
+            >
+              <svg
+                class="size-5"
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>GitHub repository of Grammy</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="mx-20 flex flex-col items-center">
+      <article
+        name="hero"
+        class="mt-28 flex w-full flex-col items-center border-b border-b-slate-700 pb-12 text-center"
+      >
+        <h1
+          name="title"
+          class="logo bg-gradient-to-tr from-sky-200 via-sky-400 via-60% to-sky-200 to-90% bg-clip-text pb-2 pr-0.5 text-7xl font-semibold tracking-tight text-transparent"
+        >
+          grammY
+        </h1>
+        <p name="description" class="mt-4 text-5xl font-extrabold text-white">
+          The Telegram Bot Framework.
+        </p>
+        <p name="tagline" class="mt-4 text-xl italic text-slate-400">
+          … a new era of bot development.
+        </p>
+        <div
+          name="action-button"
+          class="mt-11 flex justify-center space-x-6 text-sm"
+        >
+          <a
+            name="main-button"
+            class="flex h-12 w-auto items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+            href="/docs/installation"
+            >Get Started</a
+          >
+          <button
+            name="search"
+            type="button"
+            class="dark:highlight-white/5 hidden h-12 w-72 items-center space-x-3 rounded-lg bg-white px-4 text-left text-slate-400 shadow-sm ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-400 sm:flex dark:bg-slate-800 dark:text-slate-300 dark:ring-0 dark:hover:bg-slate-700"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="flex-none text-slate-300 dark:text-slate-400"
+              aria-hidden="true"
+            >
+              <path d="m19 19-3.5-3.5"></path>
+              <circle cx="11" cy="11" r="6"></circle>
+            </svg>
+            <span class="flex-auto">Search...</span>
+            <kbd class="font-sans font-semibold dark:text-slate-500"
+              ><abbr
+                title="Control"
+                class="text-slate-300 no-underline dark:text-slate-500"
+                >Ctrl
+              </abbr>
+              K</kbd
+            >
+          </button>
+        </div>
+      </article>
+      <article
+        name="main-content"
+        class="prose prose-slate prose-invert mt-8 w-full max-w-none"
+      >
+        {{ content }}
+      </article>
+    </main>
+    <footer></footer>
+
+    <div id="codeOutput">
+      <pre
+        class="shiki rose-pine bg-[#191724] text-[#e0def4]"
+        tabindex="0"
+      ><code><span class="line"><span id="cursor">▏</span></span></code></pre>
+    </div>
+  </body>
+</html>

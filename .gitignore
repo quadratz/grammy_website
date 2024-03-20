@@ -1,2 +1,3 @@
-_site/
+_dist/
 better_line_breaks/index.json
+node_modules

@@ -1,0 +1,23 @@
+@layer components {
+  #darkmode-menu input:checked+label {
+    .darkmode-list-icon {
+      @apply tw-hidden;
+    }
+
+    .darkmode-list-icon-active {
+      @apply tw-block;
+    }
+
+    .darkmode-list-text {
+      @apply tw-text-sky-500;
+    }
+  }
+
+  #darkmode-menu:where(#darkmode-list-dark:checked) {
+    background-color: greenyellow !important;
+  }
+
+  #darkmode-btn:has(+ div:hover) {
+    @apply dark:tw-fill-white;
+  }
+}

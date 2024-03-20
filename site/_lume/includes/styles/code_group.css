@@ -1,0 +1,84 @@
+@layer components {
+  .code-group {
+    @apply tw-relative;
+    @apply tw-rounded-t-md;
+    @apply tw-bg-[#192437];
+
+    .header {
+      @apply tw-flex tw-justify-between tw-relative;
+      @apply tw-pl-9 tw-gap-3;
+      @apply tw-border-b tw-border-slate-700;
+      @apply tw-select-none;
+      @apply tw-overflow-x-scroll tw-overflow-y-hidden;
+      @apply tw-z-10;
+
+      .tabs {
+        @apply tw-flex tw-items-center;
+
+        input {
+          @apply tw-hidden;
+        }
+
+        label {
+          @apply tw-relative;
+          @apply tw-py-3 tw-px-2;
+          @apply tw-text-sm tw-font-semibold;
+          @apply tw-text-slate-400;
+          @apply tw-cursor-pointer;
+
+          &:hover {
+            @apply tw-text-slate-300;
+          }
+        }
+
+        input:checked+label {
+          @apply tw-text-slate-200;
+
+          span::after {
+            @apply tw-absolute tw-left-1 tw-right-1 tw-bottom-0;
+            @apply tw-h-0.5 tw-bg-sky-500 tw-content-[""] tw-rounded-full;
+          }
+        }
+
+        .alt {
+          @apply tw-flex tw-items-center;
+          @apply tw-absolute tw-right-0 tw-top-0;
+          @apply tw-h-full;
+          @apply tw-bg-[#192437];
+
+          .lang {
+            @apply tw-px-1 tw-pl-2;
+            @apply tw-bg-[#192437];
+            @apply tw-text-sm tw-font-semibold tw-text-slate-500;
+            @apply tw-flex tw-items-center;
+            @apply tw-relative;
+
+            &::before {
+              /* @apply tw-inline-block; */
+              @apply tw-absolute tw-top-0 tw-bottom-0 tw-right-full;
+              @apply tw-content-[""];
+              @apply tw-bg-gradient-to-l tw-from-[#192437];
+              @apply tw-w-3;
+            }
+          }
+
+          .copy {
+            @apply tw-fill-slate-500 tw-h-full tw-px-1 tw-pr-2;
+
+            &:hover {
+              @apply tw-fill-slate-300;
+            }
+
+            &.copied {
+              @apply tw-cursor-default tw-fill-green-500;
+            }
+
+            svg {
+              @apply tw-h-5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
