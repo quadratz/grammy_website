@@ -1,3 +1,7 @@
+[build]
+command = "deno task build"
+publish = "site/_lume/dist"
+
 [[headers]]
   for = "/fonts/*"
   [headers.values]
