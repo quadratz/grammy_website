@@ -11,8 +11,8 @@ const timestamp = new Date().toString();
 
 <template>
   <Layout>
-    <template #layout-top>
-      <p>Build: {{ timestamp }}</p>
+    <template #layout-bottom>
+      <p id="timestamp">Build: {{ timestamp }}</p>
     </template>
     <template #home-hero-info>
       <HomeHeroInfo :name="frontmatter.hero.name" :text="frontmatter.hero.text" :taglines="frontmatter.hero.taglines" />
