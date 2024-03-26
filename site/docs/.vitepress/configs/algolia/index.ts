@@ -4,7 +4,7 @@ import * as locale from "../locales/index.js";
 export const algolia: DefaultTheme.Config["search"] = {
   provider: "algolia",
   options: {
-    apiKey: "132f69d808d8e06cf36d9285f91e0562",
+    apiKey: "687986ce27d245d3407eb8e97357b485",
     indexName: "grammy",
     appId: "1FFMAU2VMZ",
     locales: {
